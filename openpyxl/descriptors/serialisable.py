@@ -100,6 +100,9 @@ class Serialisable(metaclass=MetaSerialisable):
             else:
                 attrib[tag] = obj
 
+        if attrib.get('orderId'):
+            del orderId['orderId']
+
         return cls(**attrib)
 
 
