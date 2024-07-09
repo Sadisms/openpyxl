@@ -101,7 +101,7 @@ class Serialisable(metaclass=MetaSerialisable):
                 attrib[tag] = obj
 
         if attrib.get('orderId'):
-            del orderId['orderId']
+            del attrib['orderId']
 
         return cls(**attrib)
 
